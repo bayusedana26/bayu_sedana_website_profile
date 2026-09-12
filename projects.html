@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Bayu Sedana</title>
+  <meta name="description" content="Kumpulan proyek software engineering, machine learning Python, visualisasi Tableau, dan integrasi fintech oleh Bayu Sedana.">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 font-weight=%22bold%22 fill=%22%2338bdf8%22>B</text></svg>">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <!-- Navigation Bar -->
+    <nav class="site-nav">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link" data-i18n="nav_profile">Profil</a></li>
+        <li><a href="index.html#pengalaman" class="nav-link" data-i18n="nav_experience">Pengalaman</a></li>
+        <li><a href="projects.html" class="nav-link active" data-i18n="nav_projects">Projects</a></li>
+        <li><a href="certificates.html" class="nav-link" data-i18n="nav_certs">Certifications</a></li>
+        <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Dokumentasi Training</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Ganti Bahasa / Switch Language" title="Ganti Bahasa / Switch Language">
+          <span class="lang-opt lang-opt-id lang-active">
+            <svg class="flag-icon" viewBox="0 0 20 14" width="16" height="11" aria-hidden="true"><rect width="20" height="7" fill="#CE1126"/><rect y="7" width="20" height="7" fill="#FFFFFF"/></svg>
+            <span>ID</span>
+          </span>
+          <span class="lang-divider">/</span>
+          <span class="lang-opt lang-opt-en">
+            <svg class="flag-icon" viewBox="0 0 60 30" width="16" height="11" aria-hidden="true"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><path d="M30,0 v30 M0,15 h60" stroke="#FFFFFF" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
+            <span>EN</span>
+          </span>
+        </button>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ganti Tema" title="Ganti Tema">
+          <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <header class="gallery-page-head" style="margin-bottom: 2rem;">
+        <a href="index.html" class="back-link" data-i18n="back_to_profile">&larr; Kembali ke Profil</a>
+        <div class="hero-eyebrow" data-i18n="nav_projects">SELECTED PORTFOLIO</div>
+        <h1 class="gallery-main-title" data-i18n="projects_page_title">Selected Projects & Works</h1>
+        <p class="gallery-main-desc" data-i18n="projects_page_desc">
+          Koleksi proyek pilihan di bidang rekayasa software, machine learning Python, integrasi fintech, visualisasi Tableau, dan sistem web app.
+        </p>
+      </header>
+
+      <!-- NDA & Confidentiality Disclaimer -->
+      <div class="disclaimer-box">
+        <span class="disclaimer-icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </span>
+        <div class="disclaimer-text" data-i18n="nda_disclaimer">
+          Catatan Keterbukaan Proyek: Proyek di bawah ini adalah portofolio yang dapat saya bagikan ke publik. Proyek komersial dan in-house lainnya tidak ditampilkan secara terbuka karena terikat perjanjian kerahasiaan (NDA).
+        </div>
+      </div>
+
+      <!-- Filter Controls: Platform / Kategori -->
+      <div class="filter-group-wrap" style="margin-bottom: 2rem;">
+        <div class="filter-row project-filter-row">
+          <button class="project-filter-pill active" data-filter-cat="all">
+            <span data-i18n="filter_all">Semua</span> <span class="project-filter-count">10</span>
+          </button>
+          <button class="project-filter-pill" data-filter-cat="colab">
+            <span data-icon="googleColab"></span> <span data-i18n="filter_colab">Google Colab</span> <span class="project-filter-count">3</span>
+          </button>
+          <button class="project-filter-pill" data-filter-cat="apps">
+            <span data-icon="globe"></span> <span data-i18n="filter_apps">Web App & Dashboard</span> <span class="project-filter-count">2</span>
+          </button>
+          <button class="project-filter-pill" data-filter-cat="tableau">
+            <span data-icon="tableau"></span> <span data-i18n="filter_tableau">Tableau</span> <span class="project-filter-count">1</span>
+          </button>
+          <button class="project-filter-pill" data-filter-cat="indofun">
+            <span data-icon="indofun"></span> <span data-i18n="filter_indofun">Indofun & Fintech</span> <span class="project-filter-count">3</span>
+          </button>
+          <button class="project-filter-pill" data-filter-cat="workshop">
+            <span data-icon="ashaedu"></span> <span data-i18n="filter_workshop">AI Workshop</span> <span class="project-filter-count">1</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Gallery Grid (Visual Embeds) -->
+      <div class="project-gallery-grid" id="projects-grid">
+        
+        <!-- 1. Web App: Dashboard Monitoring Jaksel / Jakpus -->
+        <article class="project-gallery-card" data-cat="apps">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/dashboard_jakarta.png" 
+               data-title="Dashboard Monitoring Wilayah Jakarta" 
+               data-desc="Web app dashboard interaktif untuk monitoring indikator data dan operasional wilayah Jakarta yang dideploy di Vercel."
+               data-link="https://dashboardmonitoringjakpus.vercel.app/"
+               data-link-text="Buka Live App ↗">
+            <img src="assets/projects/dashboard_jakarta.png" alt="Dashboard Monitoring Wilayah Jakarta" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="vercel"></span> Vercel &bull; Web App</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Live App</span>
+            </div>
+            <h2 class="project-card-title">Dashboard Monitoring Wilayah Jakarta</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_jakpus">
+              Aplikasi web dashboard interaktif untuk agregasi data dan monitoring indikator operasional wilayah Jakarta yang dideploy di Vercel.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Live Deployment</span>
+              <a href="https://dashboardmonitoringjakpus.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="vercel"></span> <span data-i18n="btn_open_app">Buka Live App ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Colab: Sentiment Analysis -->
+        <article class="project-gallery-card" data-cat="colab">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/colab_sentiment.png" 
+               data-title="Sentiment Analysis Pipeline" 
+               data-desc="Pemodelan klasifikasi sentimen teks menggunakan Python, preprocessing teks, dan machine learning di Google Colab."
+               data-link="https://colab.research.google.com/drive/19OVfn0j1Zb-0D3srIEepJ361DYYeKwPV?usp=sharing"
+               data-link-text="Buka Google Colab ↗">
+            <img src="assets/projects/colab_sentiment.png" alt="Sentiment Analysis Pipeline Notebook" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="googleColab"></span> Google Colab &bull; NLP</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Open Notebook</span>
+            </div>
+            <h2 class="project-card-title">Sentiment Analysis Pipeline</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_sentiment">
+              Pemodelan klasifikasi sentimen teks menggunakan Python, preprocessing data teks, dan evaluasi algoritma machine learning di Google Colab.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Open Source</span>
+              <a href="https://colab.research.google.com/drive/19OVfn0j1Zb-0D3srIEepJ361DYYeKwPV?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="googleColab"></span> <span data-i18n="btn_open_notebook">Buka Notebook ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Colab: Detect and Count -->
+        <article class="project-gallery-card" data-cat="colab">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/colab_detect_count.png" 
+               data-title="Object Detection & Counting" 
+               data-desc="Implementasi computer vision deep learning untuk mendeteksi objek sekaligus menghitung jumlah target visual otomatis."
+               data-link="https://colab.research.google.com/drive/1qkRe7A5Ynan5lPLkMLgnSGdjZc4CK8af?usp=sharing"
+               data-link-text="Buka Google Colab ↗">
+            <img src="assets/projects/colab_detect_count.png" alt="Object Detection and Counting Notebook" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="googleColab"></span> Google Colab &bull; CV</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Open Notebook</span>
+            </div>
+            <h2 class="project-card-title">Object Detection & Counting</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_detect">
+              Implementasi computer vision berbasis deep learning untuk mendeteksi objek sekaligus menghitung jumlah target visual secara otomatis.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Open Source</span>
+              <a href="https://colab.research.google.com/drive/1qkRe7A5Ynan5lPLkMLgnSGdjZc4CK8af?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="googleColab"></span> <span data-i18n="btn_open_notebook">Buka Notebook ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Colab: Aerial View Detection -->
+        <article class="project-gallery-card" data-cat="colab">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/colab_aerial.png" 
+               data-title="Aerial View Object Detection" 
+               data-desc="Deteksi dan pelacakan objek dari citra udara / drone (aerial imagery) menggunakan computer vision di Google Colab."
+               data-link="https://colab.research.google.com/drive/1rGHdYzLWBv5hLjORNRLSRToiVvwHb9gM?usp=sharing"
+               data-link-text="Buka Google Colab ↗">
+            <img src="assets/projects/colab_aerial.png" alt="Aerial View Object Detection Notebook" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="googleColab"></span> Google Colab &bull; CV</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Open Notebook</span>
+            </div>
+            <h2 class="project-card-title">Aerial View Object Detection</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_aerial">
+              Deteksi dan pelacakan objek dari sudut pandang citra udara / drone (aerial imagery) menggunakan model deep learning di Google Colab.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Open Source</span>
+              <a href="https://colab.research.google.com/drive/1rGHdYzLWBv5hLjORNRLSRToiVvwHb9gM?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="googleColab"></span> <span data-i18n="btn_open_notebook">Buka Notebook ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Tableau Profile -->
+        <article class="project-gallery-card" data-cat="tableau">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/tableau_vizzes.png" 
+               data-title="Tableau Public Visualizations & Dashboards" 
+               data-desc="Kumpulan portofolio dashboard interaktif, visualisasi indikator metrik bisnis, dan analisis data di Tableau Public."
+               data-link="https://public.tableau.com/app/profile/bayusedana/vizzes"
+               data-link-text="Buka Tableau Public ↗">
+            <img src="assets/projects/tableau_vizzes.png" alt="Tableau Public Visualizations Profile" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="tableau"></span> Tableau &bull; BI</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Data & BI</span>
+            </div>
+            <h2 class="project-card-title">Tableau Visualizations & Dashboards</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_tableau">
+              Kumpulan portofolio dashboard interaktif, visualisasi indikator metrik bisnis, dan eksplorasi data yang dipublikasikan di Tableau Public.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Public Dashboards</span>
+              <a href="https://public.tableau.com/app/profile/bayusedana/vizzes" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="tableau"></span> <span data-i18n="btn_open_tableau">Buka Tableau ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. App: House of Pendowo -->
+        <article class="project-gallery-card" data-cat="apps">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/house_of_pendowo.png" 
+               data-title="House of Pendowo Web Portal" 
+               data-desc="Portal profil bisnis digital dan informasi katalog layanan untuk House of Pendowo."
+               data-link="https://sites.google.com/view/houseofpendowo/home?authuser=0"
+               data-link-text="Buka Website ↗">
+            <img src="assets/projects/house_of_pendowo.png" alt="House of Pendowo Web Portal" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="globe"></span> Web Portal</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Live Website</span>
+            </div>
+            <h2 class="project-card-title">House of Pendowo Web Portal</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_pendowo">
+              Portal profil bisnis digital dan informasi katalog layanan untuk House of Pendowo.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Live Website</span>
+              <a href="https://sites.google.com/view/houseofpendowo/home?authuser=0" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="globe"></span> <span data-i18n="btn_open_app">Buka Website ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Indofun: ShopeePay Partnership June 2022 -->
+        <article class="project-gallery-card" data-cat="indofun">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/shopeepay_june2022.png" 
+               data-title="ShopeePay Partnership Proposal: Media Barter Promo" 
+               data-desc="Dokumen proposal kemitraan fintech ShopeePay (Halaman 1 / Cover). Halaman isi bersifat rahasia (NDA).">
+            <img src="assets/projects/shopeepay_june2022.png" alt="ShopeePay Partnership Proposal Cover" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="shopeePay"></span> ShopeePay &bull; Fintech</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Partnership</span>
+            </div>
+            <h2 class="project-card-title">ShopeePay Partnership Proposal: Media Barter Promo</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_shopee_june">
+              Proposal integrasi dan kemitraan promosi fintech ShopeePay untuk pengguna baru game Idle Dynasty. Hanya menampilkan Halaman 1 (Cover) sesuai batasan kerahasiaan.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Confidential (Halaman 1)</span>
+              <span class="project-action-link btn-with-icon" style="cursor: pointer;" onclick="this.closest('.project-gallery-card').querySelector('.project-thumb-wrap').click()">
+                <span data-icon="shopeePay"></span> <span data-i18n="btn_view_cover">Lihat Cover ↗</span>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Indofun: ShopeePay Google Play Festival Feb 2022 -->
+        <article class="project-gallery-card" data-cat="indofun">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/shopeepay_feb2022.png" 
+               data-title="ShopeePay x Google Play Festival Partnership" 
+               data-desc="Dokumen perencanaan promosi ShopeePay Google Play Festival (Halaman 1 / Cover). Halaman isi bersifat rahasia (NDA).">
+            <img src="assets/projects/shopeepay_feb2022.png" alt="ShopeePay Google Play Festival Cover" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="shopeePay"></span> ShopeePay &bull; Fintech</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Partnership</span>
+            </div>
+            <h2 class="project-card-title">ShopeePay x Google Play Festival Partnership</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_shopee_feb">
+              Perencanaan kemitraan promosi pembayaran ShopeePay dalam ajang Google Play Festival. Hanya menampilkan Halaman 1 (Cover) sesuai batasan kerahasiaan.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Confidential (Halaman 1)</span>
+              <span class="project-action-link btn-with-icon" style="cursor: pointer;" onclick="this.closest('.project-gallery-card').querySelector('.project-thumb-wrap').click()">
+                <span data-icon="shopeePay"></span> <span data-i18n="btn_view_cover">Lihat Cover ↗</span>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Indofun: Guides -->
+        <article class="project-gallery-card" data-cat="indofun">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/indofun_guides.png" 
+               data-title="Idle Dynasty Player Support & Guides Portal" 
+               data-desc="Portal dokumentasi dan basis panduan interaktif resmi untuk membantu pemain memahami mekanisme event, transaksi, dan gameplay."
+               data-link="https://idle.indofungames.com/guides"
+               data-link-text="Buka Panduan ↗">
+            <img src="assets/projects/indofun_guides.png" alt="Idle Dynasty Guides Portal Preview" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="indofun"></span> Indofun &bull; Game Guides</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Documentation</span>
+            </div>
+            <h2 class="project-card-title">Idle Dynasty Player Support & Guides Portal</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_guide">
+              Portal dokumentasi dan panduan interaktif resmi untuk membantu pemain memahami mekanisme event, alur transaksi, dan panduan dasar game.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Public Guide Portal</span>
+              <a href="https://idle.indofungames.com/guides" target="_blank" rel="noopener noreferrer" class="project-action-link btn-with-icon">
+                <span data-icon="book"></span> <span data-i18n="btn_open_guide">Buka Panduan ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10. AI Workshop: Membuat Konten Kreatif dengan AI untuk Guru Abad 21 (Asha Edukasi) -->
+        <article class="project-gallery-card" data-cat="workshop">
+          <div class="project-thumb-wrap" 
+               data-full="assets/projects/ashaedu_workshop.png" 
+               data-title="Workshop AI: Membuat Konten Kreatif dengan AI untuk Guru Abad 21" 
+               data-desc="Program pelatihan intensif pemanfaatan generative AI dan tools kecerdasan buatan kreatif bagi para pendidik, diselenggarakan bersama Asha Edukasi dan Asosiasi AI Indonesia."
+               data-link="https://www.ashaedu.id/programs/workshop-ai-gratis-membuat-konten-kreatif-dengan-ai-untuk-guru-abad-21-7922"
+               data-link-text="Lihat Program ↗">
+            <img src="assets/projects/ashaedu_workshop.png" alt="Workshop AI Asha Edukasi" loading="lazy">
+            <span class="project-badge-tag"><span data-icon="ashaedu"></span> Asha Edukasi &bull; AI Workshop</span>
+            <span class="project-zoom-hint" data-i18n="preview_tag">Pratinjau ↗</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta-row">
+              <span class="project-type-pill">Live Workshop</span>
+            </div>
+            <h2 class="project-card-title">Workshop AI: Konten Kreatif Guru Abad 21</h2>
+            <p class="project-card-desc" data-i18n="proj_desc_ashaedu">
+              Pelatihan pemanfaatan generative AI untuk para pendidik bersama Asha Edukasi dan Asosiasi AI Indonesia, membedah pembuatan modul ajar, asesmen otomatis, dan media pembelajaran interaktif.
+            </p>
+            <div class="project-card-footer">
+              <span class="project-nda-note">Narasumber: Bayu Sedana</span>
+              <a href="https://www.ashaedu.id/programs/workshop-ai-gratis-membuat-konten-kreatif-dengan-ai-untuk-guru-abad-21-7922" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="project-action-link btn-with-icon">
+                <span data-icon="globe"></span> <span data-i18n="btn_open_program">Buka Program ↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div>&copy; <span id="current-year"></span> Bayu Sedana.</div>
+      <div class="footer-socials">
+        <a href="index.html" data-i18n="nav_profile">Profil</a>
+        <a href="certificates.html" data-i18n="nav_certs">Certifications</a>
+        <a href="gallery.html" data-i18n="nav_gallery">Dokumentasi Training</a>
+        <a href="mailto:bayusedana26@gmail.com" class="footer-social-link"><span data-icon="email"></span> Email</a>
+        <a href="https://wa.me/6281369075494" target="_blank" rel="noopener noreferrer" class="footer-social-link"><span data-icon="whatsapp"></span> WhatsApp</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"><span data-icon="linkedin"></span> LinkedIn</a>
+        <a href="https://github.com/bayusedana26" target="_blank" rel="noopener noreferrer" class="footer-social-link"><span data-icon="github"></span> GitHub</a>
+        <a href="https://medium.com/@bayusedana26" target="_blank" rel="noopener noreferrer" class="footer-social-link"><span data-icon="medium"></span> Medium</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lightbox Modal for Project Previews -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <div class="lightbox-viewport">
+        <img src="" alt="" id="lightbox-image">
+      </div>
+      <div class="lightbox-meta">
+        <div class="lightbox-text">
+          <h4 id="lightbox-heading">Pratinjau Proyek</h4>
+          <p id="lightbox-subheading">Keterangan dokumen.</p>
+        </div>
+        <div class="lightbox-actions" style="display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;">
+          <a href="#" id="lightbox-link" target="_blank" rel="noopener noreferrer" class="project-action-link" style="display: none; padding: 0.35rem 0.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);">
+            Kunjungi Proyek ↗
+          </a>
+          <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Tutup preview (ESC)">&times;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Project Gallery Filtering & Lightbox
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Platform / Category Filter Logic
+      let activeCat = 'all';
+
+      const catButtons = document.querySelectorAll('[data-filter-cat]');
+      const cards = document.querySelectorAll('#projects-grid .project-gallery-card');
+
+      function applyFilters() {
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-cat') || '';
+          if (activeCat === 'all' || cardCat.includes(activeCat)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCat = btn.getAttribute('data-filter-cat');
+          applyFilters();
+        });
+      });
+
+      // 2. Lightbox Interaction
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-image');
+      const lightboxHeading = document.getElementById('lightbox-heading');
+      const lightboxSubheading = document.getElementById('lightbox-subheading');
+      const lightboxLink = document.getElementById('lightbox-link');
+      const closeBtn = document.getElementById('lightbox-close-btn');
+
+      if (!lightbox || !lightboxImg) return;
+
+      const clickableThumbs = document.querySelectorAll('.project-thumb-wrap[data-full]');
+
+      clickableThumbs.forEach(item => {
+        item.addEventListener('click', () => {
+          const fullSrc = item.getAttribute('data-full');
+          const title = item.getAttribute('data-title') || '';
+          const desc = item.getAttribute('data-desc') || '';
+          const link = item.getAttribute('data-link');
+          const linkText = item.getAttribute('data-link-text') || 'Kunjungi Proyek ↗';
+
+          lightboxImg.src = fullSrc;
+          lightboxImg.alt = title;
+          lightboxHeading.textContent = title;
+          lightboxSubheading.textContent = desc;
+
+          if (link) {
+            lightboxLink.href = link;
+            lightboxLink.textContent = linkText;
+            lightboxLink.style.display = 'inline-flex';
+          } else {
+            lightboxLink.style.display = 'none';
+          }
+
+          lightbox.classList.add('is-active');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('is-active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-active')) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
