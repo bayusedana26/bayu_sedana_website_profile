@@ -2,10 +2,17 @@
 
 > High-performance, accessible, and responsive personal portfolio showcasing 5+ years of experience in Software Engineering, Data Analytics, Technical Mentoring, and Executive Presentation Decks.
 
-[![Website](https://img.shields.io/badge/Website-Live-orange?style=flat-square)](https://bayusedana.me)
+[![Website](https://img.shields.io/badge/Website-Live-orange?style=flat-square)](https://bayu-sedana-website-profile.vercel.app/)
+[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel&style=flat-square)](https://bayu-sedana-website-profile.vercel.app/)
 [![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20CSS3%20%7C%20ES6%20JS-blue?style=flat-square)](#technology-stack)
 [![Bilingual](https://img.shields.io/badge/Language-ID%20%7C%20EN-emerald?style=flat-square)](#features)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](#license)
+
+---
+
+## Live Website
+
+🔗 **Production URL**: [https://bayu-sedana-website-profile.vercel.app/](https://bayu-sedana-website-profile.vercel.app/)
 
 ---
 
@@ -119,6 +126,7 @@ Open for:
 - **Project Collaboration** (Web application development, data pipelines, executive presentation decks)
 - **Technical Mentoring & Corporate Workshops**
 
+- **Live Website**: [https://bayu-sedana-website-profile.vercel.app/](https://bayu-sedana-website-profile.vercel.app/)
 - **GitHub**: [@bayusedana26](https://github.com/bayusedana26)
 - **LinkedIn**: [Bayu Sedana](https://linkedin.com/in/bayusedana)
 - **Medium**: [Bayu Sedana](https://medium.com/@bayusedana)
